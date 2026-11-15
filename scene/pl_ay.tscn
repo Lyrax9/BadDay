@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dh4xoyy7knjm4"]
+
+[node name="PLAy" type="Button" unique_id=1751734045]
+text = "BAD DAY"

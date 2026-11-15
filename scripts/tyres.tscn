@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://bn6efw4l2j3ct"]
+
+[ext_resource type="Script" uid="uid://dh761q6xhrsoe" path="res://tyres.gd" id="1_tpe1a"]
+[ext_resource type="Texture2D" uid="uid://c7fhekcit3k5x" path="res://assests/tilemap/background/tyres.png" id="2_l7fmu"]
+[ext_resource type="Texture2D" uid="uid://d0i0hbotlahwr" path="res://assests/tilemap/background/tyres2.png" id="3_5lsjq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pksbf"]
+atlas = ExtResource("2_l7fmu")
+region = Rect2(0, 0, 960, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1llc"]
+atlas = ExtResource("3_5lsjq")
+region = Rect2(960, 0, 960, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mq8aq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pksbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pksbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pksbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pksbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pksbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pksbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pksbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pksbf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1llc")
+}],
+"loop": 1,
+"name": &"deflate",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq8aq"]
+size = Vector2(27.75, 32.75)
+
+[node name="tyres" type="Node2D" unique_id=1562477335]
+script = ExtResource("1_tpe1a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=565196745 groups=["breakable_object"]]
+position = Vector2(-23.125008, -14.625023)
+scale = Vector2(0.119010426, 0.18263893)
+sprite_frames = SubResource("SpriteFrames_mq8aq")
+animation = &"deflate"
+autoplay = "default"
+
+[node name="Tyrehitbox" type="Area2D" parent="." unique_id=906440134]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tyrehitbox" unique_id=1804693466]
+position = Vector2(-25, 6)
+shape = SubResource("RectangleShape2D_mq8aq")

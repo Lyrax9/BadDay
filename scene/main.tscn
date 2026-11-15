@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c6frlk42ixbia"]
+
+[ext_resource type="PackedScene" uid="uid://dsxewvciivdet" path="res://scene/level_root.tscn" id="1_itxqv"]
+[ext_resource type="PackedScene" uid="uid://bxnv5m0vt4tvf" path="res://scene/car.tscn" id="2_v0l8b"]
+[ext_resource type="PackedScene" uid="uid://dpmsgubbv0kcc" path="res://scene/trash_can.tscn" id="3_wp4xf"]
+
+[node name="main" type="Node2D" unique_id=1281258947]
+
+[node name="LevelRoot" parent="." unique_id=886820573 instance=ExtResource("1_itxqv")]
+
+[node name="car" parent="." unique_id=612588301 instance=ExtResource("2_v0l8b")]
+position = Vector2(1147, 542)
+
+[node name="fire hydrant" parent="." unique_id=1762792320 instance=ExtResource("3_wp4xf")]
+z_index = -1
+position = Vector2(2157, 485)
